@@ -17,15 +17,16 @@ In this version, the money does not go to the highest bid, but to the *last* one
 
 Everything is parametrable in the file _global_variables.php_, for example:
 
-$MIN_BET -> the minimum bid
+$MIN_BET: the minimum bid
 
-$INCREASE_BLOCK -> the number of blocks the bet must wait to be considered the _last_ one. This value *only* applies to the folowing bids (since the GOAL_BLOCK is written in the database when the bid is found in the blockchain)
+$INCREASE_BLOCK: the number of blocks the bet must wait to be considered the _last_ one. This value *only* applies to the folowing bids (since the GOAL_BLOCK is written in the database when the bid is found in the blockchain)
 *WARNING*: This value _should_ be only decreased (increasing it will have no impact since the waiting time is not applied retroactively).
 
-$BLOCKS_TO_NOTIFY -> Send a reminder email when the auction is about to end.
+$BLOCKS_TO_NOTIFY: Send a reminder email when the auction is about to end.
 
-$BLOCKCHAIN_JSON -> URL to ask if the transaction took place. By default is calls blockchain.info
+$BLOCKCHAIN_JSON: URL to ask if the transaction took place. By default is calls blockchain.info
 
+****
 
 The MySQL database (must be created by hand) has only one table and its columns are:
 
